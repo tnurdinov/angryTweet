@@ -13,6 +13,11 @@ gem 'active_model_serializers', '~> 0.8.1'
 gem 'puma', '~> 2.7.1'
 
 
+group :test, :development do
+  gem 'cucumber', '~> 1.3.10'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
