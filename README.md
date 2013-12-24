@@ -9,3 +9,6 @@ angryTweet
 = Running App=
  * In order to run an app `rails s`
  * `localhost:3000`
+
+= Run tests =
+* run `cucumber` on project folder
