@@ -18,9 +18,10 @@ gem 'active_model_serializers', '~> 0.8.1'
 
 gem 'puma', '~> 2.7.1'
 
+gem 'foreman'
 
 group :test do
-  gem 'cucumber-rails', '~> 1.4.0'
+  gem 'cucumber-rails', '~> 1.4.0', :require => false
   gem 'database_cleaner', '~> 1.2.0'
   gem 'capybara'
 end
