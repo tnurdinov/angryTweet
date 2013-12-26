@@ -64,6 +64,7 @@ GEM
     multi_test (0.0.2)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    pg (0.17.1)
     polyglot (0.3.3)
     puma (2.7.1)
       rack (>= 1.1, < 2.0)
@@ -117,6 +118,7 @@ DEPENDENCIES
   capybara
   cucumber-rails (~> 1.4.0)
   database_cleaner (~> 1.2.0)
+  pg
   puma (~> 2.7.1)
   rails (= 4.0.2)
   rails-api (~> 0.1.0)
