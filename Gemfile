@@ -17,7 +17,7 @@ end
 
 gem 'active_model_serializers', '~> 0.8.1'
 
-gem 'unicorn', '~> 4.7.0'
+gem 'puma', '~> 2.7.1'
 
 group :test do
   gem 'cucumber-rails', '~> 1.4.0', :require => false
