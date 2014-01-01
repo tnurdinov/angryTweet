@@ -7,7 +7,8 @@ gem 'rails-api', '~> 0.1.0'
 
 # Use sqlite3 as the database for Active Record
 group :production, :staging do
-  gem "pg"
+  gem 'pg'
+  gem 'rails_12factor', '~> 0.0.2'
 end
 
 group :development, :test do
@@ -21,5 +22,6 @@ gem 'unicorn', '~> 4.7.0'
 group :test do
   gem 'cucumber-rails', '~> 1.4.0', :require => false
   gem 'database_cleaner', '~> 1.2.0'
+  gem 'selenium-webdriver'
   gem 'capybara'
 end
