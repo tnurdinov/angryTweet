@@ -5,6 +5,9 @@
 # files.
 
 require 'cucumber/rails'
+require 'cucumber/formatter/unicode'
+require 'capybara/rails'
+require 'selenium-webdriver'
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
@@ -36,8 +39,16 @@ rescue NameError
   raise "You need to add database_cleaner to your Gemfile (in the :test group) if you wish to use it."
 end
 
-Capybara.javascript_driver = :webkit
+Capybara.default_driver = :selenium
 
+Capybara.configure do |config|
+  config.match = :one
+  config.exact_options = true
+  config.ignore_hidden_elements = true
+  config.visible_text_only = true
+  config.default_wait_time = 10
+  config.app_host = "http://localhost:3000"
+end
 # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.
 # See the DatabaseCleaner documentation for details. Example:
 #
